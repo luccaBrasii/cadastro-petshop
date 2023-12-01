@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop</title>
+
+    <!-- ... (seções anteriores) ... -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        button {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container div {
+            margin: 20px;
+            width: 400px;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .container div h2 {
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Gerenciamento de Cachorros</h1>
+    
+    <section class="container">
+        <div>
+            <h2>Cadastrar Nova Raça</h2>
+            <form id="raçaForm">
+                <label for="raçaNome">Nome da Raça:</label>
+                <input type="text" id="raçaNome" required>
+                <button type="button" onclick="cadastrarRaça()">Cadastrar Raça</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Cadastrar Novo Cachorro</h2>
+            <form id="cachorroForm">
+                <label for="cachorroNome">Nome do Cachorro:</label>
+                <input type="text" id="cachorroNome" required>
+
+                <label for="raçaSelecionada">Selecione a Raça:</label>
+                <select id="raçaSelecionada" required></select>
+
+                <button type="button" onclick="cadastrarCachorro()">Cadastrar Cachorro</button>
+            </form>
+        </div>
+
+    </section>
+
+    <section class="container">
+        <div>
+            <h2>Raças Cadastradas</h2>
+            <ul id="raçasList"></ul>
+        </div>
+        <div>
+            <h2>Cachorros Cadastrados</h2>
+            <ul id="cachorrosList"></ul>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
