@@ -66,7 +66,7 @@ function cadastrarCachorro() {
 
 // Função para carregar a lista de cachorros
 function carregarListaCachorros() {
-
+    // Limpa a lista de cachorros existente
     const cachorrosList = document.getElementById('cachorrosList');
     cachorrosList.innerHTML = '';
 
@@ -77,6 +77,12 @@ function carregarListaCachorros() {
         cachorrosList.appendChild(li);
     });
 }
+
+// Função auxiliar para encontrar uma raça por ID
+function encontrarRacaPorId(raçaId) {
+    return raças.find(raça => raça.id == raçaId) || {};
+}
+
 
 carregarListaRacas();
 carregarListaCachorros();
